@@ -4,7 +4,7 @@
 I have created a simple *Guess the Number* game. It chooses a random number between 10 and 100(exclusive) and then challenges the player to guess the number in 7 turns. After each turn the player is told if they are right or wrong. 
 'B' means that their digit is correct but in right place, 'C' means that their digit is correct but in wrong place. It also tells the player what numbers they previously guessed. The game ends once the player guesses correctly, or once they run out of turns. When the game ends, the player is given an option to start playing again.
 
-## Broken Down into **Actionble** Tasks :kissing_heart:
+## Broken Down into **Actionble** Tasks
 1. Generate a random number between 10 and 100(exclusive).
 2. Record the turn number the player is on. Start it on 1.
 3. Provide the player with a way to guess what the number is.
