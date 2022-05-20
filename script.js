@@ -44,7 +44,7 @@ function checkGuess() {
       lastResult.textContent = '!!!GAME OVER!!!'; 
       let num = randomNumber;
       let textwit = num.toString();
-      lowOrHi.textContent = textwit;  
+      lowOrHi.textContent = 'Correct number is : ' + textwit;  
       setGameOver();   
 
     } else {    // if the player has not reached 10 guesses (and its just playing wrong)
