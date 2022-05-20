@@ -1,46 +1,27 @@
-usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
-           <command> [<args>]
+# Number Guessing Game :sparkling_heart:
 
-These are common Git commands used in various situations:
 
-start a working area (see also: git help tutorial)
-   clone             Clone a repository into a new directory
-   init              Create an empty Git repository or reinitialize an existing one
+I have created a simple *Guess the Number* game. It chooses a random number between 10 and 100(exclusive) and then challenges the player to guess the number in 7 turns. After each turn the player is told if they are right or wrong. 
+'B' means that their digit is correct but in right place, 'C' means that their digit is correct but in wrong place. It also tells the player what numbers they previously guessed. The game ends once the player guesses correctly, or once they run out of turns. When the game ends, the player is given an option to start playing again.
 
-work on the current change (see also: git help everyday)
-   add               Add file contents to the index
-   mv                Move or rename a file, a directory, or a symlink
-   restore           Restore working tree files
-   rm                Remove files from the working tree and from the index
-   sparse-checkout   Initialize and modify the sparse-checkout
+## Broken Down into **Actionble** Tasks :kissing_heart:
+1. Generate a random number between 10 and 100(exclusive).
+2. Record the turn number the player is on. Start it on 1.
+3. Provide the player with a way to guess what the number is.
+4. Once a guess has been submitted first record it somewhere so the user can see their previous guesses.
+5. Next, check whether it is the correct number.
+6. If it is correct:
+7. Display congratulations message.
+8. Stop the player from being able to enter more guesses (this would mess the game up).
+9. Display control allowing the player to restart the game.
+10. If it is wrong and the player has turns left:
+11. Tell the player they are wrong.
+12. Allow them to enter another guess.
+13. Increment the turn number by 1.
+14. If it is wrong and the player has no turns left:
+15. Tell the player it is game over.
+16. Stop the player from being able to enter more guesses (this would mess the game up).
+17. Display control allowing the player to restart the game.
+18. Once the game restarts, make sure the game logic and UI are completely reset, then go back to step 1.
 
-examine the history and state (see also: git help revisions)
-   bisect            Use binary search to find the commit that introduced a bug
-   diff              Show changes between commits, commit and working tree, etc
-   grep              Print lines matching a pattern
-   log               Show commit logs
-   show              Show various types of objects
-   status            Show the working tree status
 
-grow, mark and tweak your common history
-   branch            List, create, or delete branches
-   commit            Record changes to the repository
-   merge             Join two or more development histories together
-   rebase            Reapply commits on top of another base tip
-   reset             Reset current HEAD to the specified state
-   switch            Switch branches
-   tag               Create, list, delete or verify a tag object signed with GPG
-
-collaborate (see also: git help workflows)
-   fetch             Download objects and refs from another repository
-   pull              Fetch from and integrate with another repository or a local branch
-   push              Update remote refs along with associated objects
-
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-See 'git help git' for an overview of the system.

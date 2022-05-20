@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Number guessing game</title>
+
+    <link rel="stylesheet "href="index.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="container">
+    <h1>Number Guessing Game &#128150</h1>
+
+    <p>Guess a two digit number. You have 7 turns.</p>
+    <p>'B' means your guessing number is inside the hidden number and in the right place .</p>
+    <p>'C' means your guessing number is inside the hidden number but in the wrong place. &#128521</p>
+
+    <div class="form">
+      <label for="guessField">Enter a guess: </label>
+      <input type="text" id="guessField" class="guessField">
+      <input type="submit" value="Submit guess" class="guessSubmit">
+    </div>
+
+    <!-- Elements manipulated by JS -->
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+    </div>
+
+    <script src="script.js" defer></script>
+    
+  </body>
+</html>
