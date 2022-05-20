@@ -47,7 +47,7 @@ function checkGuess() {
       lowOrHi.textContent = 'Correct number is : ' + textwit;  
       setGameOver();   
 
-    } else {    // if the player has not reached 10 guesses (and its just playing wrong)
+    } else {    // if the player has not reached 7 guesses (and its just playing wrong)
       lastResult.textContent = 'Wrong!';    
       lastResult.style.backgroundColor = 'red'; 
       let gu1 = parseInt(userGuess/10);
