@@ -14,7 +14,7 @@ const guessField = document.querySelector('.guessField');
 let guessCount = 1;
 let resetButton;
 
-
+let counmas=0;
 function checkGuess() {
     let userGuess = Number(guessField.value);     
     if (guessCount === 1) {     
@@ -22,16 +22,29 @@ function checkGuess() {
     }
     
     guesses.textContent += userGuess + ' ';  
-   
     if (userGuess === randomNumber)
     {  
-      lastResult.textContent = 'Congratulations! You got it right!';
-      lastResult.style.backgroundColor = 'green';   
-      lowOrHi.textContent = '';
-      setGameOver(); 
+      counmas++;
+      if(counmas==3){
+        lastResult.textContent = 'Congratulations! You mastered the game!';
+        lastResult.style.backgroundColor = 'green';   
+        lowOrHi.textContent = '';
+        setGameOver(); 
+      }
+
+      else{
+        lastResult.textContent = 'Congratulations! You got it right!';
+        lastResult.style.backgroundColor = 'green';   
+        lowOrHi.textContent = '';
+        setGameOver(); 
+      }
 
     }else if (guessCount === 7) {     // if the player reaches 7 guesses
-      lastResult.textContent = '!!!GAME OVER!!!';   
+      counmas=0;
+      lastResult.textContent = '!!!GAME OVER!!!'; 
+      let num = randomNumber;
+      let textwit = num.toString();
+      lowOrHi.textContent = textwit;  
       setGameOver();   
 
     } else {    // if the player has not reached 10 guesses (and its just playing wrong)
